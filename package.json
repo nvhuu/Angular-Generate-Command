@@ -1,0 +1,109 @@
+{
+  "name": "angular-generate-command",
+  "displayName": "Angular Generate Command",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+       "commands": [{
+        "command": "angular-generate-command.component",
+        "title": "Angular Generate Command: Component"
+      },
+      {
+        "command": "angular-generate-command.directive",
+        "title": "Angular Generate Command: Directive"
+      },
+      {
+        "command": "angular-generate-command.service",
+        "title": "Angular Generate Command: Service"
+      },
+      {
+        "command": "angular-generate-command.module",
+        "title": "Angular Generate Command: Module"
+      },
+      {
+        "command": "angular-generate-command.interceptor",
+        "title": "Angular Generate Command: Interceptor"
+      },
+      {
+        "command": "angular-generate-command.pipe",
+        "title": "Angular Generate Command: Pipe"
+      },
+      {
+        "command": "angular-generate-command.guard",
+        "title": "Angular Generate Command: Guard"
+      },      {
+        "command": "angular-generate-command.environments",
+        "title": "Angular Generate Command: Environments"
+      }
+    ],
+    "menus": {
+      "explorer/context": [{
+          "command": "angular-generate-command.component",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "angular-generate-command.directive",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "angular-generate-command.service",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "angular-generate-command.interceptor",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "angular-generate-command.module",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "angular-generate-command.pipe",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "angular-generate-command.guard",
+          "when": "explorerResourceIsFolder"
+        },{
+          "command": "angular-generate-command.environments",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "yarn run check-types && yarn run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "yarn run check-types && yarn run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "esbuild": "^0.25.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
