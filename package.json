@@ -1,14 +1,20 @@
 {
   "name": "angular-generate-command",
   "displayName": "Angular Generate Command",
-  "description": "",
+  "description": "Generate Angular artifacts by copying CLI commands to clipboard",
   "version": "0.0.1",
+  "publisher": "Huu.Nguyen",
   "engines": {
     "vscode": "^1.99.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other", "Angularity","Angular"],
+  "keywords": ["angular", "generate", "cli", "vscode"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nvhuu/Angular-Generate-Command.git"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
   "main": "./dist/extension.js",
   "contributes": {
        "commands": [{
