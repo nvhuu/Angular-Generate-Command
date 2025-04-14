@@ -10,9 +10,12 @@
   * We pass the function containing the implementation of the command as the second parameter to `registerCommand`.
 
 ## Setup
-
-* install the recommended extensions (amodio.tsl-problem-matcher, ms-vscode.extension-test-runner, and dbaeumer.vscode-eslint)
-
+* clone this repo.
+* install the recommended extensions: npm install or yarn
+* install vsce: npm install -g @vscode/vsce
+* run command: vsce package
+* open Command Pelleted (Ctrl + Shift + P), search "Extensions: Install from VSIX" and select the first item.
+* select file angular-generate-command-0.0.1.vsix generated
 
 ## Get up and running straight away
 

@@ -14,7 +14,7 @@ The **Angular Generate Command** extension for Visual Studio Code simplifies the
   - Guards
   - Environments
 - Interactive input for artifact names and options (e.g., standalone, skip tests, inline styles).
-- Copies the full Angular CLI command (including `cd` to the workspace path) to the clipboard.
+- Copies the full Angular CLI command to the clipboard.
 - Displays a confirmation message when the command is copied.
 - Supports context menu integration for folder-based generation in the VS Code Explorer.
 
@@ -68,7 +68,7 @@ To generate a standalone component named `my-component`:
 2. Select `Angular Generate Command: Component`.
 3. Enter `my-component` in the input box.
 4. Select `Standalone` and `Skip Test` from the options list.
-5. The command `cd "/path/to/project" && ng generate component my-component --standalone --skip-tests` is copied.
+5. The command `ng generate component my-component --standalone --skip-tests` is copied.
 6. Paste and run it in your terminal to create the component.
 
 ## Available Commands
