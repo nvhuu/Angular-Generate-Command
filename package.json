@@ -16,6 +16,16 @@
   "license": "MIT",
   "icon": "icon.png",
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:angular-generate.component",
+    "onCommand:angular-generate.directive",
+    "onCommand:angular-generate.service",
+    "onCommand:angular-generate.interceptor",
+    "onCommand:angular-generate.module",
+    "onCommand:angular-generate.pipe",
+    "onCommand:angular-generate.guard",
+    "onCommand:angular-generate.environments"
+  ],
   "contributes": {
        "commands": [{
         "command": "angular-generate-command.component",
